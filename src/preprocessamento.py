@@ -28,6 +28,55 @@ def setup_nltk():
     nltk.download("omw-1.4", quiet=True)
 
 
+STOPWORDS_EXTRA = {
+    "http",
+    "https",
+    "doi",
+    "org",
+    "www",
+    "com",
+    "page",
+    "nature",
+    "discover",
+    "scientific",
+    "report",
+    "reports",
+    "springer",
+    "copyright",
+    "et",
+    "al",
+    "based",
+    "using",
+    "used",
+    "use",
+    "new",
+    "proposed",
+    "approach",
+    "method",
+    "paper",
+    "work",
+    "result",
+    "english",
+    "hindi",
+    "bengali",
+    "telugu",
+    "cse",
+    "cic",
+    "id",
+    "ids",
+}
+
+
+EXPRESSOES = {
+    ("machine", "learning"): "machine_learning",
+    ("transfer", "learning"): "transfer_learning",
+    ("neural", "network"): "neural_network",
+    ("post", "quantum"): "post_quantum",
+    ("qubit", "gate"): "qubit_gate",
+    ("two", "qubit", "gate"): "two_qubit_gate",
+}
+
+
 def construir_stopwords():
     return set(stopwords.words("english"))
 
@@ -122,6 +171,36 @@ def extrair_referencias(secao: str) -> list[str]:
 
     return referencias
 
+def unir_expressoes(tokens: list[str]) -> list[str]:
+
+    resultado = []
+    i = 0
+
+    while i < len(tokens):
+
+        # tenta unir um trigrama
+        if i + 2 < len(tokens):
+            chave = (tokens[i], tokens[i + 1], tokens[i + 2])
+
+            if chave in EXPRESSOES:
+                resultado.append(EXPRESSOES[chave])
+                i += 3
+                continue
+
+        # tenta unir um bigrama
+        if i + 1 < len(tokens):
+            chave = (tokens[i], tokens[i + 1])
+
+            if chave in EXPRESSOES:
+                resultado.append(EXPRESSOES[chave])
+                i += 2
+                continue
+
+        resultado.append(tokens[i])
+        i += 1
+
+    return resultado
+
 
 def preprocessar(texto: str, stop_words: set, lematizar: bool, stemming: bool) -> list[str]:
     """
@@ -164,6 +243,8 @@ def preprocessar(texto: str, stop_words: set, lematizar: bool, stemming: bool) -
             tokens_normalizados.append(porter_stemmer.stem(t))
         tokens = tokens_normalizados
 
+    tokens = unir_expressoes(tokens)
+
     return tokens
 
 
@@ -171,6 +252,8 @@ def construir_bow(lista_tokens: list[list[str]]) -> Counter:
     """Constrói um Bag of Words a partir de uma lista de listas de tokens."""
 
     todos = []
+
+    document_frequency = Counter()
 
     for tokens in lista_tokens:
         for token in tokens:
@@ -226,9 +309,10 @@ def salvar_resultados(dados: dict, caminho: str):
 
     print(f"Resultados salvos em {caminho}")
 
+
 def main():
-    setup_nltk()
-    stop_words = construir_stopwords()
+    #setup_nltk()
+    stop_words = construir_stopwords().union(STOPWORDS_EXTRA)
 
     print("Carregando artigos...")
 
@@ -259,6 +343,7 @@ def main():
     bigramas = contar_ngramas(lista_tokens, 2)
     trigramas = contar_ngramas(lista_tokens, 3)
 
+    
     exibir_top("Palavras mais frequentes", bow, TOP_N)
     exibir_top("Bigramas mais frequentes", bigramas, TOP_N, True)
     exibir_top("Trigramas mais frequentes", trigramas, TOP_N, True)
@@ -280,3 +365,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
