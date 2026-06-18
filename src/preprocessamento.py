@@ -11,8 +11,9 @@ from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.util import ngrams
 
 
-DIRETORIO_PDFS = "artigos"
-DIRETORIO_SAIDA = "resultados"
+DIRETORIO_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DIRETORIO_PDFS = os.path.join(DIRETORIO_BASE, "artigos")
+DIRETORIO_SAIDA = os.path.join(DIRETORIO_BASE, "resultados")
 TOP_N = 10
 
 # parâmetros
@@ -121,7 +122,6 @@ def carregar_artigos(diretorio: str) -> dict[str, str]:
     return artigos
 
 
-
 INDICADORES_REFERENCIAS = ["References", "REFERENCES", "Bibliography", "BIBLIOGRAPHY", "Referências", "REFERÊNCIAS"]
 
 def separar_corpo_referencia(texto: str) -> tuple[str, str]:
@@ -171,31 +171,26 @@ def extrair_referencias(secao: str) -> list[str]:
 
     return referencias
 
-def unir_expressoes(tokens: list[str]) -> list[str]:
 
+def unir_expressoes(tokens: list[str]) -> list[str]:
     resultado = []
     i = 0
 
     while i < len(tokens):
-
         # tenta unir um trigrama
         if i + 2 < len(tokens):
             chave = (tokens[i], tokens[i + 1], tokens[i + 2])
-
             if chave in EXPRESSOES:
                 resultado.append(EXPRESSOES[chave])
                 i += 3
                 continue
-
         # tenta unir um bigrama
         if i + 1 < len(tokens):
             chave = (tokens[i], tokens[i + 1])
-
             if chave in EXPRESSOES:
                 resultado.append(EXPRESSOES[chave])
                 i += 2
                 continue
-
         resultado.append(tokens[i])
         i += 1
 
@@ -211,7 +206,6 @@ def preprocessar(texto: str, stop_words: set, lematizar: bool, stemming: bool) -
     - remove stop-words e tokens menores de 3 caracteres
     - pode realizar a lematização ou stemming
     """
-
     texto = texto.lower()
 
     # mantém apenas letras e espaços
@@ -250,10 +244,7 @@ def preprocessar(texto: str, stop_words: set, lematizar: bool, stemming: bool) -
 
 def construir_bow(lista_tokens: list[list[str]]) -> Counter:
     """Constrói um Bag of Words a partir de uma lista de listas de tokens."""
-
     todos = []
-
-    document_frequency = Counter()
 
     for tokens in lista_tokens:
         for token in tokens:
@@ -265,7 +256,6 @@ def construir_bow(lista_tokens: list[list[str]]) -> Counter:
 
 def contar_ngramas(lista_tokens: list[list[str]], n: int = 2) -> Counter:
     """Conta n-gramas no corpus completo."""
-
     todos_ngramas = []
 
     for tokens in lista_tokens:
@@ -335,6 +325,7 @@ def main():
             "tokens": len(tokens),
             "referencias": len(referencias),
             "lista_referencias": referencias,
+            "corpo": corpo,
         }
 
         print(f"{nome}: {len(tokens)} tokens")
@@ -365,4 +356,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
