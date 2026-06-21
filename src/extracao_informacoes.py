@@ -60,6 +60,24 @@ NOMES_SECOES = {
     "conclusao":  ["conclusion", "conclusions", "concluding remarks", "summary"],
 }
 
+def eh_cabecalho_de_secao(linha: str, nome: str) -> bool:
+    """
+    Verifica se a linha é realmente o título de uma seção,
+    e não uma frase qualquer que contenha a palavra.
+    """
+    linha_limpa = linha.strip().lower()
+
+    # remove um número de seção no início, ex: "3 " ou "3. "
+    partes = linha_limpa.split(maxsplit=1)
+    if partes and partes[0].rstrip(".").isdigit():
+        if len(partes) > 1:
+            linha_sem_numero = partes[1]
+        else:
+            linha_sem_numero = ""
+    else:
+        linha_sem_numero = linha_limpa
+
+    return linha_sem_numero.startswith(nome) and len(linha_limpa) < 50
 
 
 def extrair_secao(texto: str, nomes: list[str]) -> str:
@@ -72,26 +90,22 @@ def extrair_secao(texto: str, nomes: list[str]) -> str:
     conteudo = []
 
     for linha in linhas:
-        linha_lower = linha.strip().lower()
-
-        # Verifica se a linha é o cabeçalho da seção procurada
+        eh_cabecalho = False
         for nome in nomes:
-            if nome in linha_lower and len(linha.strip()) < 60:
-                dentro_da_secao = True
+            if eh_cabecalho_de_secao(linha, nome):
+                eh_cabecalho = True
                 break
+
+        if eh_cabecalho and not dentro_da_secao:
+            dentro_da_secao = True
+            continue
 
         if not dentro_da_secao:
             continue
 
-        # Quando encontra o início de outra seção numerada
-        if dentro_da_secao and conteudo:
-            eh_novo_cabecalho = (
-                linha.strip() and
-                len(linha.strip()) < 60 and
-                linha.strip()[0].isdigit()
-            )
-            if eh_novo_cabecalho:
-                break
+        # para quando encontra um novo cabecalho numerado
+        if conteudo and linha.strip() and len(linha.strip()) < 60 and linha.strip()[0].isdigit():
+            break
 
         conteudo.append(linha)
 
@@ -106,14 +120,16 @@ def extrair_sentencas(texto: str, palavras_chave: list[str]) -> list[str]:
     """
     sentencas  = sent_tokenize(texto)
     encontradas = []
+    ja_adicionadas = set()
  
     for sentenca in sentencas:
         sentenca_lower = sentenca.lower()
         for palavra in palavras_chave:
             if palavra in sentenca_lower:
                 sentenca_limpa = re.sub(r'\s+', ' ', sentenca).strip()
-                if len(sentenca_limpa) > 40:   # descarta fragmentos muito curtos
+                if len(sentenca_limpa) > 40 and sentenca_limpa not in ja_adicionadas:   # descarta fragmentos muito curtos
                     encontradas.append(sentenca_limpa)
+                    ja_adicionadas.add(sentenca_limpa)
                     break   # evita duplicata pela mesma sentença
  
         if len(encontradas) >= MAXIMO_SENTENCAS:
@@ -193,7 +209,7 @@ def main():
     resultados = []
 
     for nome, info in dados["artigos"].items():
-        print(f"\\nProcessando: {nome}")
+        print(f"\nProcessando: {nome}")
         corpo = info["corpo"]
         resultado = extrair_informacoes(nome, corpo)
         exibir_resultado(resultado)
