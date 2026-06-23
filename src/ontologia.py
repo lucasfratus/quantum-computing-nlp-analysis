@@ -81,8 +81,7 @@ def montar_termos_frequentes(top_termos):
 
 
 def main():
-    print("\nETAPA 3 — Serializacao em Ontologia (JSON-LD)")
-    print("Tema: Quantum Computing | Base: Scopus\n")
+    print("\nSerializacao em Ontologia (JSON-LD)\n")
 
     dados_etapa1 = carregar_json(CAMINHO_ETAPA1)
     dados_etapa2 = carregar_json(CAMINHO_ETAPA2)
