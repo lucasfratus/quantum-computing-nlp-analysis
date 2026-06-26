@@ -95,13 +95,20 @@ def ler_pdf(caminho: str) -> str:
                         texto_extraido += conteudo + "\n"
                 except Exception:
                     continue
-        if texto_extraido.strip():
-            return texto_extraido
+            
+        if texto_extraido:
+            return limpar_texto(texto_extraido)
         raise ValueError
     
     except Exception as e:
         from pdfminer.high_level import extract_text as pdfminer_extract
         return pdfminer_extract(caminho)
+
+
+PDFS_PROBLEMATICOS = {
+    "s40507-026-00463-5.pdf",
+    "s40507-026-00483-1.pdf",
+}
 
 
 def carregar_artigos(diretorio: str) -> dict[str, str]:
@@ -117,7 +124,12 @@ def carregar_artigos(diretorio: str) -> dict[str, str]:
     
     for caminho in pdfs:
         print(f"{caminho.name}")
-        artigos[caminho.name] = ler_pdf(str(caminho))
+        if caminho.name in PDFS_PROBLEMATICOS:
+            from pdfminer.high_level import extract_text
+            texto = extract_text(str(caminho))
+            artigos[caminho.name] = limpar_texto(texto)
+        else:
+            artigos[caminho.name] = ler_pdf(str(caminho))
 
     return artigos
 
@@ -197,6 +209,28 @@ def unir_expressoes(tokens: list[str]) -> list[str]:
     return resultado
 
 
+def limpar_texto(texto: str) -> str:
+    """
+    Corrige problemas comuns de extração de PDF:
+    - palavras coladas sem espaço 
+    - hifens de quebra de linha 
+    - múltiplas quebras de linha
+    """
+    # junta palavras quebradas com hífen no fim da linha
+    texto = re.sub(r'-\n', '', texto)
+
+    # insere espaço entre letra minúscula e maiúscula coladas
+    texto = re.sub(r'([a-z])([A-Z])', r'\1 \2', texto)
+
+    # insere espaço entre letra e vírgula/ponto colados a outra palavra
+    texto = re.sub(r'([a-zA-Z]),([a-zA-Z])', r'\1, \2', texto)
+
+    # remove múltiplas quebras de linha
+    texto = re.sub(r'\n{3,}', '\n\n', texto)
+
+    return texto
+
+
 def preprocessar(texto: str, stop_words: set, lematizar: bool, stemming: bool) -> list[str]:
     """
     Realiza o pré-processamento:
@@ -251,7 +285,6 @@ def construir_bow(lista_tokens: list[list[str]]) -> Counter:
             todos.append(token)
 
     return Counter(todos)
-
 
 
 def contar_ngramas(lista_tokens: list[list[str]], n: int = 2) -> Counter:
