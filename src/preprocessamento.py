@@ -67,6 +67,22 @@ STOPWORDS_EXTRA = {
     "ids",
 }
 
+STOPWORDS_FALLBACK = {
+    "a", "about", "above", "after", "again", "against", "all", "am", "an", "and",
+    "any", "are", "as", "at", "be", "because", "been", "before", "being", "below",
+    "between", "both", "but", "by", "can", "did", "do", "does", "doing", "down",
+    "during", "each", "few", "for", "from", "further", "had", "has", "have", "having",
+    "he", "her", "here", "hers", "herself", "him", "himself", "his", "how", "i",
+    "if", "in", "into", "is", "it", "its", "itself", "just", "me", "more", "most",
+    "my", "myself", "no", "nor", "not", "now", "of", "off", "on", "once", "only",
+    "or", "other", "our", "ours", "ourselves", "out", "over", "own", "same", "she",
+    "should", "so", "some", "such", "than", "that", "the", "their", "theirs", "them",
+    "themselves", "then", "there", "these", "they", "this", "those", "through", "to",
+    "too", "under", "until", "up", "very", "was", "we", "were", "what", "when",
+    "where", "which", "while", "who", "whom", "why", "will", "with", "you", "your",
+    "yours", "yourself", "yourselves"
+}
+
 
 EXPRESSOES = {
     ("machine", "learning"): "machine_learning",
@@ -79,7 +95,12 @@ EXPRESSOES = {
 
 
 def construir_stopwords():
-    return set(stopwords.words("english"))
+    """Carrega stopwords do NLTK, com fallback para manter o projeto executável."""
+    try:
+        return set(stopwords.words("english"))
+    except LookupError:
+        print("Aviso: stopwords do NLTK não encontradas; usando lista fallback.")
+        return set(STOPWORDS_FALLBACK)
 
 
 def ler_pdf(caminho: str) -> str:
@@ -102,7 +123,7 @@ def ler_pdf(caminho: str) -> str:
     
     except Exception as e:
         from pdfminer.high_level import extract_text as pdfminer_extract
-        return pdfminer_extract(caminho)
+        return limpar_texto(pdfminer_extract(caminho))
 
 
 PDFS_PROBLEMATICOS = {
@@ -247,7 +268,10 @@ def preprocessar(texto: str, stop_words: set, lematizar: bool, stemming: bool) -
     texto = re.sub(r'\s+', ' ', texto).strip()
 
     # tokenização
-    tokens = nltk.word_tokenize(texto)
+    try:
+        tokens = nltk.word_tokenize(texto)
+    except LookupError:
+        tokens = re.findall(r"[a-z]+", texto)
 
     # stop-words e tokens curtos
     tokens_filtrados = []
@@ -261,9 +285,12 @@ def preprocessar(texto: str, stop_words: set, lematizar: bool, stemming: bool) -
     porter_stemmer = PorterStemmer()
     if lematizar:
         tokens_normalizados = []
-        for t in tokens:
-            tokens_normalizados.append(wn_lemmatizer.lemmatize(t))
-        tokens = tokens_normalizados
+        try:
+            for t in tokens:
+                tokens_normalizados.append(wn_lemmatizer.lemmatize(t))
+            tokens = tokens_normalizados
+        except LookupError:
+            print("Aviso: WordNet do NLTK não encontrado; lematização ignorada.")
 
     elif stemming:
         tokens_normalizados = []

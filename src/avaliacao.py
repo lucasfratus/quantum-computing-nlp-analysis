@@ -25,7 +25,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 RESULTADOS = RAIZ / "resultados"
 
 CAMINHO_PREDICOES = RESULTADOS / "etapa2_resultados.json"
-CAMINHO_GABARITO = "src/gabarito_manual.json"
+CAMINHO_GABARITO = RAIZ / "src/gabarito_manual.json"
 CAMINHO_METRICAS = RESULTADOS / "etapa4_metricas.json"
 CAMINHO_DETALHES = RESULTADOS / "etapa4_detalhes.csv"
 CAMINHO_GRAFICO = RESULTADOS / "etapa4_metricas.png"
