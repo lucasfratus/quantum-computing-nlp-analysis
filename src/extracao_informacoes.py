@@ -14,8 +14,6 @@ from preprocessamento import carregar_artigos, separar_corpo_referencia
 DIRETORIO_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIRETORIO_PDFS = os.path.join(DIRETORIO_BASE, "artigos")
 DIRETORIO_SAIDA = os.path.join(DIRETORIO_BASE, "resultados")
-MAXIMO_SENTENCAS = 4 # máximo de sentenças extraídas por categoria
-
 
 PALAVRAS_OBJETIVO = [
     "this paper aims", "this paper presents", "this paper proposes",
@@ -131,9 +129,6 @@ def extrair_sentencas(texto: str, palavras_chave: list[str]) -> list[str]:
                     encontradas.append(sentenca_limpa)
                     ja_adicionadas.add(sentenca_limpa)
                     break   # evita duplicata pela mesma sentença
- 
-        if len(encontradas) >= MAXIMO_SENTENCAS:
-            break
  
     return encontradas
 
