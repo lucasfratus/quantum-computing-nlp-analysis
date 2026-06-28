@@ -6,9 +6,7 @@ O projeto aplica técnicas de Processamento de Linguagem Natural (PLN) em um con
 
 ## Tema
 
-O tema escolhido foi:
-
-**Quantum Computing**
+O tema escolhido foi "Quantum Computing".
 
 Os artigos utilizados no corpus principal ficam na pasta:
 
