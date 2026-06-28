@@ -1,6 +1,6 @@
 # Trabalho de PLN - Análise de Artigos sobre Computação Quântica
 
-Trabalho desenvolvido para a disciplina de **Introdução à Inteligência Artificial**, ministrada pelo professor Wagner Igarasi.
+Trabalho desenvolvido para a disciplina de **Introdução à Inteligência Artificial**, ministrada pelo professor Wagner Igarashi.
 
 O projeto aplica técnicas de Processamento de Linguagem Natural (PLN) em um conjunto de artigos científicos em PDF sobre computação quântica. A partir dos textos extraídos, o sistema realiza pré-processamento, extração de informações, geração de uma ontologia, avaliação dos resultados e visualizações.
 
