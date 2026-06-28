@@ -195,7 +195,7 @@ Foram geradas visualizações para:
 - técnicas mais mencionadas;
 - evolução temporal dos termos;
 - termos encontrados em trechos de trabalhos futuros;
-- heatmap artigo × termo.
+- heatmap.
 
 Saídas principais:
 
