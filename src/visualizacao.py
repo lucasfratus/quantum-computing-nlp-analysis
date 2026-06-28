@@ -51,9 +51,7 @@ TECNICAS = [
 ]
 
 
-# Termos que aparecem por causa de figura/tabela ou por causa do próprio
-# padrão usado para localizar trabalhos futuros. Eles são úteis na busca,
-# mas deixam os gráficos menos informativos.
+# Termos que aparecem por causa de figura/tabela ou para encontrar trabalhos futuros
 TERMOS_RUIDO_GERAL = {
     "fig",
     "figure",
