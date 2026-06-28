@@ -1,0 +1,197 @@
+{
+  "palavras_mais_citadas": {
+    "quantum": 1644,
+    "model": 531,
+    "state": 503,
+    "circuit": 395,
+    "gate": 393,
+    "classical": 316,
+    "data": 312,
+    "measurement": 290,
+    "algorithm": 276,
+    "feature": 261,
+    "computing": 260,
+    "layer": 256,
+    "time": 250,
+    "performance": 236,
+    "resource": 217,
+    "qubits": 209,
+    "system": 204,
+    "qubit": 202,
+    "dataset": 199,
+    "architecture": 188
+  },
+  "tecnicas_mais_mencionadas": {
+    "quantum computing": 162,
+    "machine learning": 110,
+    "quantum circuit": 109,
+    "blockchain": 97,
+    "quantum algorithm": 65,
+    "intrusion detection": 56,
+    "neural network": 55,
+    "transfer learning": 52,
+    "reinforcement learning": 45,
+    "quantum machine learning": 34,
+    "hybrid quantum classical": 29,
+    "feature selection": 20,
+    "variational quantum circuit": 18,
+    "quantum neural network": 16,
+    "post quantum cryptography": 16,
+    "quantum key distribution": 13,
+    "quantum optimization": 7,
+    "quantum support vector machine": 6,
+    "variational quantum algorithm": 5,
+    "quantum recurrent neural network": 4
+  },
+  "evolucao_temporal": {
+    "ano_por_artigo": {
+      "1-s2.0-S266630742500035X-main.pdf": "2026",
+      "s10115-026-02685-6.pdf": "2026",
+      "s10791-026-09990-2.pdf": "2026",
+      "s40507-026-00463-5.pdf": "2026",
+      "s40507-026-00483-1.pdf": "2026",
+      "s40507-026-00513-y.pdf": "2026",
+      "s41534-025-01146-2.pdf": "2025",
+      "s41534-025-01171-1.pdf": "2025",
+      "s41598-025-32572-z.pdf": "2025",
+      "s41598-026-40634-z.pdf": "2026",
+      "s41598-026-42859-4.pdf": "2026",
+      "s43926-026-00316-8.pdf": "2026"
+    },
+    "termos_acompanhados": [
+      "quantum",
+      "model",
+      "state",
+      "circuit",
+      "gate",
+      "classical",
+      "data",
+      "measurement"
+    ],
+    "frequencias_por_ano": {
+      "2025": {
+        "quantum": 147,
+        "model": 46,
+        "state": 131,
+        "circuit": 118,
+        "gate": 146,
+        "classical": 21,
+        "data": 35,
+        "measurement": 36
+      },
+      "2026": {
+        "quantum": 1497,
+        "model": 485,
+        "state": 372,
+        "circuit": 277,
+        "gate": 247,
+        "classical": 295,
+        "data": 277,
+        "measurement": 254
+      }
+    }
+  },
+  "trabalhos_futuros": {
+    "quantidade_trechos": 17,
+    "termos_mais_frequentes": {
+      "quantum": 10,
+      "real": 5,
+      "model": 3,
+      "scenario": 3,
+      "focus": 3,
+      "hybrid": 3,
+      "limitation": 3,
+      "investigate": 3,
+      "framework": 3,
+      "challenge": 2,
+      "complex": 2,
+      "system": 2,
+      "evaluate": 2,
+      "world": 2,
+      "developing": 2,
+      "superconducting": 2,
+      "photonic": 2,
+      "optimizing": 2,
+      "efficiency": 2,
+      "machine_learning": 2
+    },
+    "trechos": [
+      {
+        "arquivo": "1-s2.0-S266630742500035X-main.pdf",
+        "trecho": "Finally, scalability remains a persistent challenge because many quantum models face barriers when applied to complex systems, necessitating further research to evaluate their feasibility in real-world scenarios. 4.7."
+      },
+      {
+        "arquivo": "1-s2.0-S266630742500035X-main.pdf",
+        "trecho": "Future research directions Future research in quantum AI should focus on developing more stable quantum hardwareparticularly superconducting, photonic, and hybrid qubits less affected by noisewhile optimizing hybrid quantumclassical models to boost efficiency in machine learning and optimization tasks and advancing encoding and data structuring methods to create datasets tailored for quantum algorithms."
+      },
+      {
+        "arquivo": "1-s2.0-S266630742500035X-main.pdf",
+        "trecho": "Future research should prioritize improving qubit coherence, enhancing post-quantum cryptography, and developing scalable quantum architectures, thereby ensuring the feasi bility of these emerging technologies in real-world scenarios."
+      },
+      {
+        "arquivo": "s10115-026-02685-6.pdf",
+        "trecho": "Therefore, to overcome this limitation, our future work will check the performance of QRNN on various length datasets."
+      },
+      {
+        "arquivo": "s10791-026-09990-2.pdf",
+        "trecho": "In our future work, we will focus on the latest advancements in quantum computing technology and further investigate the performance and applications of semi-quantum blockchain."
+      },
+      {
+        "arquivo": "s40507-026-00463-5.pdf",
+        "trecho": "Future research may investigate runtime strategies for dynamically allocating tasks between classical and quantum processors, depending on the complexity and dimensionality of incoming data streams."
+      },
+      {
+        "arquivo": "s40507-026-00483-1.pdf",
+        "trecho": "Nonetheless, to our knowledge, this approach has not been clearly discussed in literature, while still may be an interesting future research direction."
+      },
+      {
+        "arquivo": "s40507-026-00483-1.pdf",
+        "trecho": "A hybrid approach to leverage the strengths of both model may be instrumental in guiding experimental implementations on superconducting, trapped-ion, and photonic platforms. 7.3 Limitations and future directions Several limitations of the present analysis should be acknowledged."
+      },
+      {
+        "arquivo": "s40507-026-00483-1.pdf",
+        "trecho": "Conversely, the overheads of error correction and magic state distillation in CBQC may become prohibitive as systems scale, motivating further research into alternative faulttolerant schemes."
+      },
+      {
+        "arquivo": "s40507-026-00513-y.pdf",
+        "trecho": "tegrationwiththepresentpreproc essingstageisanaturaldirectionforfuture work. 4C o n c l u s i o n In this work, we presented a greedy heuristic algorithm for efficiently reordering gates duringpreprocessing, alongwiththepackingandpartitioningapproachesintegratedinto ara Qne, thedistributed quantumcompilerdevelopedby Welinq."
+      },
+      {
+        "arquivo": "s41534-025-01146-2.pdf",
+        "trecho": "Furthermore, extending the simulations to investigate the p erformance of logical gates and computation55, even for the surface code, would be an interesting future direction."
+      },
+      {
+        "arquivo": "s41598-026-40634-z.pdf",
+        "trecho": "Exploring this integration represents a promising direction for future research."
+      },
+      {
+        "arquivo": "s41598-026-40634-z.pdf",
+        "trecho": "Future work will evaluate the proposed framework on real network traffic streams to assess its real-time intrusion-detection capability."
+      },
+      {
+        "arquivo": "s41598-026-40634-z.pdf",
+        "trecho": "Additionally, future work will explore integrating Singular Pooling (SP)28 into the quantum transfer learning framework."
+      },
+      {
+        "arquivo": "s41598-026-40634-z.pdf",
+        "trecho": "Quantumenhanced machine learning demonstrates strong potential in addressing complex cybersecurity challenges, and the findings of this work provide a foundation for future research."
+      },
+      {
+        "arquivo": "s41598-026-40634-z.pdf",
+        "trecho": "Future investigations will focus on optimizing computational efficiency, reducing inference latency, and extending the framework toward real-time deployment scenarios, further strengthening its applicability in operational cybersecurity environments."
+      },
+      {
+        "arquivo": "s41598-026-42859-4.pdf",
+        "trecho": "In future work, QRGEC will be extended toward quantum multi agent federated coordination to enable decentralized learning across interconnected edge clusters."
+      }
+    ]
+  },
+  "visualizacoes_geradas": [
+    "resultados/observacoes/palavras_mais_citadas.png",
+    "resultados/observacoes/nuvem_palavras_geral.png",
+    "resultados/observacoes/tecnicas_mais_mencionadas.png",
+    "resultados/observacoes/evolucao_temporal_termos.png",
+    "resultados/observacoes/heatmap_artigo_termo.png",
+    "resultados/observacoes/termos_trabalhos_futuros.png"
+  ]
+}

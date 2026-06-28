@@ -1,0 +1,266 @@
+[
+  {
+    "arquivo": "1-s2.0-S266630742500035X-main.pdf",
+    "objetivo": [
+      "Consequently, this study aims to identify the applications and variables associated with QC-AI integration.",
+      "This study aims to systematically examine the intersection of quantum computing and artificial intelligence by identifying the key technological features, integration requirements, and sectoral applications that define the current state of the field.",
+      "This study aims to identify QC applications and methodologies applied to AI and to assess their impact on process optimization and complex problem-solving."
+    ],
+    "problema": [
+      "Despite significant progress, AI-QC integration faces critical limitations: dependence on NISQ hardware with high error rates, lack of standardized methodologies, and insufficient conceptual frameworks for articulating applications and technical requirements (Ghodke et al., 2024).",
+      "However, these advantages are problem-specific and have been rigorously proven only for certain algorithms, such as Shor’s and Grover’s (Moret-Bonillo, 2015).",
+      "However, the lack of structured knowledge regarding specific QC methodologies and applications in AI hinders its optimal implementation and development.",
+      "The study concludes that although QC demonstrates substantial potential to enhance AI, its broader adoption remains constrained by reliance on NISQ hardware, the need for effective error correction, and the limited scalability of hybrid quantum classical algorithms."
+    ],
+    "metodo": [
+      "To this end, a systematic literature review was conducted following the PRISMA 2020 methodology, drawing on studies from Scopus and Web of Science databases.",
+      "According to PRISMA 2020 is employed to identify and analyze applications and methodologies at the intersection of QC and AI, an interdisciplinary field that demands rigorous approaches to integrate high-quality and relevant studies.",
+      "Healthcare; spectroscopy and imaging (NMR, MRI, control of spin) Quantum control, evolutionary algorithms, RF pulse optimization, design of experiments, inhomogeneity compensation Subrahmanian et al. (2022) Hybrid Entanglement Distribution between Remote Microwave Quantum Computers Empowered by Machine Learning USA (University of Arizona, USC) Theoretical proposal and simulation; development of a hybrid CVDV protocol for entanglement distribution with ML optimization Quantum computer connectivity (microwave QC) Entanglement distribution, hybrid CVDV protocol, microwave-optical transduction, ML optimization, superconductor integration Zhang et al.",
+      "Machine Learning for Electronic Structure Calculations of Periodic Systems on Quantum Computing Devices USA Hybrid quantumclassical approach using restricted Boltzmann machines and IBM-Q simulations to calculate the electronic structure of periodic systems Materials science; computational chemistry (calculation of electronic structures) Hybrid quantumclassical algorithms, ML potentials, electronic calculations, quantum device benchmarking Sureshbabu et al."
+    ],
+    "contribuicoes": [
+      "The review contributes by mapping existing research, highlighting methodological approaches, and revealing gaps that may guide targeted advancements in hybrid quantum AI systems.",
+      "These contributions aim to guide future experimental validations and hybrid model development.",
+      "The insights generated have the potential to accelerate innovation in high-impact domains such as healthcare, finance, energy, and cybersecurity.",
+      "Additionally, this review introduces an integrative framework that categorizes key AI QC convergence dimensions and proposes a classification of application areas based on technical requirements and algorithmic capabilities.",
+      "The contributions are threefold: (i) providing a structured synthesis and classification of literature on QC-AI inte gration under NISQ constraints, (ii) presenting sector-based examples that illustrate opportunities and use cases, and (iii) outlining a forwardlooking research agenda to guide the use of QC in enhancing AI."
+    ]
+  },
+  {
+    "arquivo": "s10115-026-02685-6.pdf",
+    "objetivo": [
+      "To bridge this gap, this paper proposes a quantum recurrent neural network (QRNN) designed specifically for sequential labeling tasks.",
+      "To overcome this research gap, we propose a hybrid quantum-classical recurrent neural network (QRNN) that is used specifically for sequential labeling tasks.",
+      "The proposed QRNN is a hybrid quantum-classical model, which combines quantum and classical resources."
+    ],
+    "problema": [
+      "However, the superiority of transformer-based models poses various challenges, such as demands for a large amount of data and parameters to train models [4].",
+      "Quantum computing can efficiently solve problems that are difficult for traditional computing, such as factoring large numbers [7].",
+      "Although several studies have explored the application of QML techniques to NLP such as language modeling [17], text classification [18], and sentiment analysis [19], there is still a noticeable research gap in applying quantum-enhanced architectures to sequential labeling, a core problem in NLP that involves assigning categorical labels to each token in a sequence.",
+      "However, these algorithms cannot be applied to current quantum hardware due to their dependence on quantum RAM to execute."
+    ],
+    "metodo": [
+      "All the experiments are implemented on Penny Lane framework on its local simulator default-qubit except the noise model, which is performed on default.mixed simulator.",
+      "In our experiments, stochastic gradient optimization is used to optimize the VQC parameters and weight matrix W.",
+      "However, the proposed model utilizes angle encoding, which is an efficient data encoding method for QNNs.",
+      "QRNN is applied to perform POS tagging in nine different code-mixed datasets, where each dataset represents a unique combination of languages."
+    ],
+    "contribuicoes": [
+      "Our main contribution is: 1. to develop a QRNN that combines VQCs with classical layers to perform efficient sequential labeling; 2. to evaluate QRNN performance employing part-of-speech (POS) tagging, a sequence labeling task on nine different code-mixed datasets, and 3. to present ablation studies that examine the influence of different data encoding methods, entanglement strategies, and variational circuit depths on model performance.",
+      "This novel model shows the potential of QRNN for efficiently labeling input sequences."
+    ]
+  },
+  {
+    "arquivo": "s10791-026-09990-2.pdf",
+    "objetivo": [
+      "To address these challenges, a blockchain framework based on a semiquantum key distribution network, referred to as Semi-Quantum Blockchain (SQB), is proposed.",
+      "In this paper, we propose a Semi-Quantum Blockchain (SQB) scheme that utilizes one-direction quantum walk on a circle. 1.",
+      "In SQB, we propose a Po A consensus mechanism that utilizes one-direction quantum walk on a circular topology."
+    ],
+    "problema": [
+      "Quantum attacks represent a significant challenge for blockchain technology. quantum computing disrupts the traditional classical computing paradigm, enabling the rapid resolution of problems that classical computing struggles to address.",
+      "Post-quantum cryptography, however, is based on mathematical computational complexity, with its security rely ing on the difficulty of solving mathematical problems.",
+      "However, with the proliferation of blockchain applications, several technical and security challenges have emerged, including issues related to transaction speed, scalability, and vulnerabilities in smart contracts [1].",
+      "SQB is the first comprehensive semi-quantum blockchain framework, bridging the gap between resource-intensive quantum blockchains and computationally costly postquantum alternatives."
+    ],
+    "metodo": [
+      "In the mea surement process, compared with other quantum schemes using QSCD ff problem differentiation algorithm, quantum state comparison techniques and other measure ment methods, this paper’s scheme uses measurement techniques such as single-par ticle measurements and Bell measurements, which are simpler to realize.",
+      "SQB employs an enhanced Po A consensus algorithm, maintaining quantum channels only between authority nodes (including the leader node).",
+      "Finally, the hash value h M is computed by jointly processing hp and Mh.",
+      "The leader node election process is conducted through a quantum voting scheme, which is also based on one-direction quantum walk on a circle [20]."
+    ],
+    "contribuicoes": [
+      "The security analysis demonstrates that SQB provides robust post-quantum security and significantly outperforms its peers in terms of quantum resource consumption and quantum communication efficiency, establishing it as a secure and efficient blockchain solution."
+    ]
+  },
+  {
+    "arquivo": "s40507-026-00463-5.pdf",
+    "objetivo": [
+      "This work introduces Hybrid Quantum Neural Network (HQNN) contrived for overcoming these challenges and facilitate efficient Quantum enabled machine learning for real time intrusion detection systems.",
+      "Experimental analysis validates the efficiency of the proposed work compared to existing models, showcasing promising results in Io T environments."
+    ],
+    "problema": [
+      "In addition, security becomes a difficult problem when Io T devices communicate over wireless channels.",
+      "All Io T adoption, however, is thought to be particularly sensitive to security and privacy concerns.",
+      "An effective way to reduce and respond to these cyber threats is to employ network intrusion detection system (IDS).",
+      "This system detect and identify vulnerabilities in Io T based systems that pose a major threat to the security of any system connected to it as well as the overall smart environment [1]."
+    ],
+    "metodo": [
+      "First, the methodology was validated through quantum simulation, and then the experiments were deployed on an IBM quantum processor to assess real-device performance.",
+      "The dataset was generated using the Cooja network simulator in the Contiki-NG environment, ensuring accurate emulation of constrained Io T devices and routing behavior.",
+      "In our experimentation, the repetition codes are implemented for each dataset (Bo T, ACI and KDD) after encoding features using ZZFeature mapping.",
+      "Then final circuit ⨂︂ ⨂︁ Uϕ(x) H ⨂︂ ⨂︁ n H n Uϕ(x) Finally, the information regarding the quantum kernel is extracted from the quantum circuit in order to input it into the quantum SVM algorithm."
+    ],
+    "contribuicoes": []
+  },
+  {
+    "arquivo": "s40507-026-00483-1.pdf",
+    "objetivo": [
+      "Next, we propose a decision flow that, given specific hardware constraints and algorithm requirements, guides the selection to the most appropriate model, discussing suitability in two representative worked examples of quantum algorithm applications: Quantum Fourier Transform (QFT) and Variational Quantum Algorithm (VQE).",
+      "Additionally, for the purpose of the following use-case illustrations, we adopt representative hardware parameters that aligns with current experimental results and directly enter the simplified execution-time estimates in Equation (3).",
+      "In this work, we present a detailed comparative analysis of CBQC and MBQC, beginning with reviewing the theoretical foundations of each model before highlighting its distinguishing features that set the two paradigms apart."
+    ],
+    "problema": [
+      "However, the preparation of high-fidelity cluster states at scale remains a significant technical challenge on current NISQ hardware.",
+      "Meanwhile, in MBQC, recent advances have demonstrated that certain cluster state constructions, e.g., color-code-based cluster states, can implement universal, fault tolerant computation with potentially lower overhead for some logical gates, although state distillation remains a major challenge for arbitrary gates [52].",
+      "However, the preparation and stabilization of such states remain significant technical challenges, particularly as the system scales.",
+      "Despite these conceptual advantages, MBQC’s practical realization of FT and QEC remains less mature than in CBQC, primarily due to the technical challenges associated with generating and maintaining large-scale cluster states with sufficient fidelity and connectivity."
+    ],
+    "metodo": [
+      "Furthermore, building on previous work, we propose a generalized regime analysis that more accurately captures the conditions under which a given quantum algorithm is more favorably executed in MBQC or CBQC.",
+      "Next, we propose a decision flow that, given specific hardware constraints and algorithm requirements, guides the selection to the most appropriate model, discussing suitability in two representative worked examples of quantum algorithm applications: Quantum Fourier Transform (QFT) and Variational Quantum Algorithm (VQE).",
+      "The logic of the algorithm (i.e., the quantum gate equivalent of CBQC) is encoded in the pattern and basis of these measurements, with classical processing (i.e., feed-forward) used to adapt subsequent measurement choices based on previous outcomes [4].",
+      "In this framework, errors correspond to topological defects, and logical operations are implemented by braiding or manipulating these defects within the cluster state."
+    ],
+    "contribuicoes": []
+  },
+  {
+    "arquivo": "s40507-026-00513-y.pdf",
+    "objetivo": [
+      "In Sect.3 we present results for the distribution cost of several classes ofquantumcircuitsincluding circuits fromthe widely used QASMBench1.4benchmarkingsuite[25].Thiscomparisonestablishestheimportanceof efficient circuit reordering strategies for distributed quantum compiling.",
+      "We develop such a strategy in thefollowingsection. 2.2 Agreedyheuristicalgorithmforgatereorderingandpacking Notethattwoadjacentpackets 𝒫i and𝒫i+1 canbemergedintoasinglepacket 𝒬j =𝒫i ·𝒫i+1 if they are rooted on the same control qubit."
+    ],
+    "problema": [
+      "However, solving real-size problems and relevant industrial use cases requires quantum processing units (QPUs) with a large number of error corrected qubits [1-5].",
+      "This remains a core challenge for hardware engineers [6,7], while quantum algorithm researchers are developing methodsallowinglargescalequantumcomputationwithlimitedresources[8].",
+      "However, such method is constrained to the gate set (H, Mengonietal.",
+      "The novel preprocessing strategy employed inthisworkreordersthegatesofaninputcircuit, optimizingtheirgroupingintogatepackets.Theproposedmethodexploitsunitaryoperatorcommutationandcontrol-symmetry oflogicaloperations, aswellasgate-packetmerging, increasingthesizeofgatepacketsand thereby reducing the quantum communication overhead required for non-local operations.Theaboveapproachisshowntobeeffectivelyleveragedfordistributedhypergraphbasedquantumcompilation."
+    ],
+    "metodo": [
+      "Non-local operations are implemented using the Tele Gate quantum communication protocol, which consumes one pre-shared EPRpairforeachexecution(see Appendix A).",
+      "Under this perspective, the fact that our method performs comparably across several benchmarkinstancesindicatesthatthepreprocessingstagebasedongatereorderingcan alreadyyieldmeaningfulreductionsindistributioncost.Thishelpsclarifythespecificeffectofgatereordering, independentlyoffurtherrefinements.Atthesametime, thetechniques explored in the above works are best viewed as complementary to our approach, andtheirintegrationwiththepresentpreproc essingstageisanaturaldirectionforfuture work. 4C o n c l u s i o n In this work, we presented a greedy heuristic algorithm for efficiently reordering gates duringpreprocessing, alongwiththepackingandpartitioningapproachesintegratedinto ara Qne, thedistributed quantumcompilerdevelopedby Welinq.",
+      "In the following, we explain how multiple quantum gates can be distributed together, as a gate packet, using a single Tele Gate protocol (Sect.2.1).",
+      "Ourworkleveragesthenotionofgatepackets[16,17,23,24],which, combinedwithan efficient preprocessing circuit optimization method, yields a unique framework of distributed quantum compilation."
+    ],
+    "contribuicoes": [
+      "As a result, our framework provides a flexible and scalable solution suited for the demandsoffuturelarge-scalequantumcomputingarchitectures."
+    ]
+  },
+  {
+    "arquivo": "s41534-025-01146-2.pdf",
+    "objetivo": [
+      "We propose WT3 architecture in this work to lower the stringent entanglement generation requirements.",
+      "Focusing on solid-state quantum hardware, we investigate the threshold and logical failure rate of a fully distributed surface code.",
+      "We consider both emission-based and scattering-based entanglement schemes between the modules to link the performance to the physical hardware and identify the regime for fault tolerance."
+    ],
+    "problema": [
+      "However, identifying optimal architectures and entanglement generation protocols remains an open question.",
+      "While the RFL scheme requires optical circulators and a delay line to guide and manipulate the photons, which raises challenges in on-chip integrated photonics, the CAR scheme circumvents these problems.",
+      "For some entanglement schemes, thresholds nearing the thresholds of non-distributed implementations (~ 0.4%) appear feasible with future parameters minimizing the performance gap between modular and monolithic quantum processors.",
+      "Error-corrected1- 3 modular quantum computers4- 9 offer a promising route to overcome the noise and scalability challenges of large-scale fault-tolerant quantum computing."
+    ],
+    "metodo": [
+      "Set-2 has increased link coherence times by one order of magnitude, andfinally, we consider Set-3, which has coherence times of 10 Although our simulation model allows for distinct T1 and T2 times, for each communication and memory qubits, we considered Tdec 1;link ¼ Tdec 2; link and Tdec 1;idle ¼ Tdec 2; idle, where the subscripts 1, 2 denote the T1 and T2 decay times.",
+      "The FP sets are inspired by potential improvements in the experiments.",
+      "The NTP sets are inspired by the same recent experiments as the RFL scheme parameters.",
+      "Operation and coherence times We consider a broad set of coherence and operation time parameters as s h o w ni n F i g.9.T h e r e,Tdec link and Tdec idle describe the coherence times applicable to the CQs and memory qubits when entanglement generation is attempted and during idling, respectively."
+    ],
+    "contribuicoes": []
+  },
+  {
+    "arquivo": "s41534-025-01171-1.pdf",
+    "objetivo": [
+      "This work introduces a complete workflow from first principles for simulating corrosion processes.",
+      "We present computational models for aqueous corrosion in magnesium and magnesium-aluminum alloy surf aces, which may be extendable to o t h e rm e t a l l i cs y s t e m s;a n df o rh i gh-temperature oxidation in niobium alloys, which are critical for extreme environments but highly susceptible to degradation.",
+      "Results We develop a hybrid classical-quantum workflow to investigate the corrosion mechanisms at the atomic scale in two classes of alloys, under aqueous and high-temperature environments."
+    ],
+    "problema": [
+      "However, no single mathematical framework currently exists that can fully capture the complexity of the physical and chemical processes driving corrosion7,8.",
+      "Our models for magnesium corrosion are based on nudged elastic band modeling, while our niobium algorithm involves a coupledcluster approximation to map the problem to a classical Ising model.",
+      "We conduct a comprehensive resource assessment for quantum modeling of aqueous and high-temperature corrosion processes, marking the first application of the py LIQTR computational tool to a real-world materials science problem.",
+      "HER is further complicated by the highly-reactive, and short-lived corrosion intermediates formed during cathodic polarization, presenting a significant challenge in both computational and experiment al investigations of the reaction mechanism."
+    ],
+    "metodo": [
+      "This section describes the methodology for constructing classical-quantum hybrid workflows using the QBG framework and the methods used to estimate resources presented in the main paper.",
+      "The discretization error in this PW approach is asymptotically equivalent to Galerkin discretization s using other single-particle bases (including Gaussian orbitals)48.M o r e o v e r,t h efirst quantization framework offers a much more space-ef ficient (algorithmically) representation compared to the second quantization formalism.",
+      "Quantum subroutines In this work, we employ the qubitized quantum phase estimation (QPE) algorithm, as described in ref. 46, to extract spectral information, specifically the ground state energies, for chemical systems of interest.",
+      "A major factor in the computational expense of using QPE for ground-state energy estimation lies in choosing the initial state for the algorithm."
+    ],
+    "contribuicoes": []
+  },
+  {
+    "arquivo": "s41598-025-32572-z.pdf",
+    "objetivo": [
+      "To address this, we propose folding the linear layout into a two-dimensional grid while preserving the efficiency of the linear transformation.",
+      "This paper introduces optimal compilation strategies tailored to QFT circuits on the DPQA architecture, addressing these challenges for both linear and grid-like configurations.",
+      "Our contributions are threefold: • We propose a Linear Path strategy that achieves the theoretical lower bound in atom-movement count for one-dimensional linear DPQA processors. • We extend this approach to two-dimensional (2D) grid-like DPQA processors through a Zigzag Path strategy, which preserves gate parallelism while minimizing movement overhead. • We demonstrate that our methods outperform state-of-the-art DPQA compilers, including Enola 22 and Atomique23, achieving exponential improvements in movement efficiency and overall circuit fidelity."
+    ],
+    "problema": [
+      "However, the all-to-all interaction pattern of QFT poses significant challenges, especially in layouts with limited qubit connectivity.",
+      "Despite these strengths, efficiently implementing quantum circuits like the Quantum Fourier Transform (QFT) remains a significant challenge due to atom-movement overheads and connectivity constraints.",
+      "However, designing a general-purpose optimal compiler is fundamentally intractable, since optimal quantum circuit compilation is an NP-hard problem.",
+      "Hardware constraints such as limited qubit connectivity, short coherence times, and low gate fidelity necessitate optimizations tailored to specific platforms."
+    ],
+    "metodo": [
+      "We implement Linear and Zigzag Paths in Python and employ Enola’s Code Gen framework 22 to generate gate execution and schedule movements.",
+      "All experiments were conducted on a system running Ubuntu 22.04, equipped with a 40-core Intel Xeon Gold 5215 processor at 2.50 GHz and 512 GB of RAM.",
+      "In this section, we evaluate the performance of our proposed methods (called Linear and Zigzag Paths, respectively) for transforming QFT circuits on the DPQA architecture.",
+      "Our evaluation aims to demonstrate the effectiveness of our methods in minimizing resource overheads while maintaining high-fidelity quantum operations."
+    ],
+    "contribuicoes": []
+  },
+  {
+    "arquivo": "s41598-026-40634-z.pdf",
+    "objetivo": [
+      "This study proposes a framework that uses quantum transfer learning to enhance cybersecurity threat detection by leveraging multiple datasets, including UNSWNB15, CICIDS2017, CSE-CIC-IDS2018, and TON_Io T.",
+      "The objective of this research is to investigate the feasibility and potential benefits of integrating quantum transfer learning into intrusion detection systems, thereby bridging the gap between classical machine learning limitations and the emerging capabilities of quantum computing.",
+      "The major contributions of this research are as follows: • This study proposes a novel hybrid quantum transfer learning framework that integrates classical pre-trained models with variational quantum circuits for intrusion detection. • Progressive transfer learning is demonstrated across multiple benchmark cybersecurity datasets (UN SW-NB15 → CICIDS2017/CSE-CIC-IDS2018 → TON_Io T), improving model generalization without full retraining."
+    ],
+    "problema": [
+      "However, existing quantum-enhanced intrusion detection systems typically employ quantum models only at the classification stage or rely on standalone quantum architectures, while transfer learning-based IDS remain limited to classical-to-classical knowledge reuse.",
+      "Despite these advances, classical AI-based models often struggle with highdimensional cybersecurity datasets, heterogeneous feature spaces, and generalization across different network environments13,14.",
+      "Quantum transfer learning for cross-domain cybersecurity threat detection and categorization Shtwai Alsubai1, Mohamed Ayari2, Natalia Kryvinska3, Ahmad Almadhor4, Jamel Baili5, Abdullah Al Hejaili6 & Sidra Abbas7 Cybersecurity challenges have become increasingly complex and widespread, and the risks associated with these problems are substantial, affecting thousands of individuals and organisations and being crucial to national security.",
+      "The objective of this research is to investigate the feasibility and potential benefits of integrating quantum transfer learning into intrusion detection systems, thereby bridging the gap between classical machine learning limitations and the emerging capabilities of quantum computing."
+    ],
+    "metodo": [
+      "Class weights were computed separately for each dataset used in the experiments, adapting to each dataset’s class distribution to maintain fair representation.",
+      "In Phase 1, PCA, feature selection, encoding, scaling, and dimensionality reduction are performed on the UNSW NB15 dataset.",
+      "In Phase 2, UNSWNB15 and CSE-CIC-IDS2018 are used to create a dataset with the same formatting as UNSW-NB15, ensuring that features are compatible across the datasets.",
+      "A data pre-processing pipeline is applied to the dataset."
+    ],
+    "contribuicoes": []
+  },
+  {
+    "arquivo": "s41598-026-42859-4.pdf",
+    "objetivo": [
+      "To address these challenges, this research proposes QRGEC: Quantum Reinforcement Learning with Golden Jackal Optimization for Resilient Edge Cloud Coordination in Internet Computing.",
+      "The proposed hybrid framework integrates quantum focused policy exploration with adaptive metaheuristic tuning to enhance distributed Internet computing optimization.",
+      "Developing methods such as quantum reinforcement learning provides promising opportunities to mitigate these challenges."
+    ],
+    "problema": [
+      "However, to the best of our knowledge, no existing work has combined QRL with GJO for enhancing the resilience and coordination efficiency of edge-cloud systems under fluctuating computational and communication constraints.",
+      "However, the dynamic heterogeneity within the Internet-scale systems and the stochastic nature of the resources are a major challenge in the effective coordination of the Edge and the cloud layers1.",
+      "However, they struggle in environments with changing network topologies and varying resource requirements, thus hindering scalability and dependability in distributed systems.",
+      "Outlined networking challenges in distributed quantum computing, emphasizing synchronization, quantum routing, and entanglement-management issues that hinder scalable quantum Internet development19."
+    ],
+    "metodo": [
+      "Scope of quantum evaluation The quantum reinforcement learning components in QRGEC are evaluated using state-of-the-art quantum simulation platforms, including Qiskit and Tensor Flow Quantum, integrated with Cloud Sim Plus.",
+      "Performance of the proposed QRGEC framework was verified based on hybrid edge cloud systems, implemented using Cloud Sim Plus 6.0 combined with Qiskit 1.2 and Tensor Flow Quantum libraries through extensive simulations.",
+      "The quantum reinforcement learning components in QRGEC are implemented using Qiskit and Tensor Flow Quantum simulators.",
+      "Training was conducted for E = 200 episodes with (λg,λ q)=(0.3, 0.25) and trust bound δ =0.01."
+    ],
+    "contribuicoes": []
+  },
+  {
+    "arquivo": "s43926-026-00316-8.pdf",
+    "objetivo": [
+      "Discover Internet of Things (2026) 6:53 3 Io T-edge coordination layer The Io T-Edge Coordination Layer plays a pivotal role in and this proves optimal task scheduling and resource management across distributed Io T and edge infrastructures. 3.1 Task scheduling framework The goal is to maximize cumulative reward Rt, which balances Qo S, energy efficiency, and throughput.",
+      "The main objectives of the work involve the fol lowing: (1) To design a unified AI-driven quantum-resilient Cyber-Physical System (AIQRCPS) framework."
+    ],
+    "problema": [
+      "However, as quantum computing and ultra-dense Io T networks tends to get expanded, traditional encrypting data and optimizing systems are insufficient to secure the data in real time.",
+      "However, the modern systems struggle with latency management and high computational complexity that occur after quantum computing.",
+      "Artificial Intelligence (AI) with post-quantum cryptography and edge intelligence transforms CPS into self-adaptive ecosystems that is capable of handling threats.",
+      "Similarly, Elkhodr et al. [27] present the Combined Adaptive Security Framework for Io T (IASF-Io T), which uses AI, blockchain, quantum-resistant cryptog raphy, and Digital Twins for predictive and proactive threat mitigation."
+    ],
+    "metodo": [
+      "The simulations are configured with the following parameters to model realistic CPS operation as in Tables 12, 13. 6.4 Performance metrics The performance of the proposed framework is evaluated using the following metrics: Average Latency (ms): It measures the end-to-end delay for task execution across edge-Io T-cloud layers.",
+      "At 50 nodes, the proposed framework achieves 74.5 tasks/s, outperforming FOA (58.7 tasks/s), QML (61.8 tasks/s), QHCP (64.1 tasks/s), and CH-DDQ + 2-Brain (65.8 tasks/s).",
+      "Experimental evaluation shows that the proposed framework achieves an average latency as low as 7.9-10.7 ms, throughput up to 94.5 tasks/s, energy consumption as low as 3.3-4.8 J/task, and task completion rates exceeding 98% across varying edge/Io T node densities and bandwidths.",
+      "Hence, this paper research develops an AI-Driven Quantum-Resilient Cyber-Physical System (AI-QRCPS) framework that combines three novel layers and this includes: (i) a Post-Quantum Security Layer employing lattice-based cryptography and quantum key distribution for end-to-end confidentiality, (ii) an Adaptive Intelligence Layer using Reinforcement Learning (RL) and Firefly Optimization for dynamic resource orchestration and anomaly detection, and (iii) an Io T-Edge Coordination Layer for latency-aware task scheduling using double deep Q-learning."
+    ],
+    "contribuicoes": [
+      "The novelty involves a three-layered design, which combines quantum-safe cryptog raphy, adaptive learning-based optimization and Io T-edge coordination for security across heterogeneous CPS environments."
+    ]
+  }
+]

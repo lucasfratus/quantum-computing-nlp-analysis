@@ -10,10 +10,16 @@
     "ReferenciaBibliografica": "ReferenciaBibliografica",
     "FrequenciaTermo": "FrequenciaTermo",
     "EstatisticasArtigo": "EstatisticasArtigo",
+    "Visualizacao": "Visualizacao",
+    "TecnicaMencionada": "TecnicaMencionada",
+    "EvolucaoTemporalTermo": "EvolucaoTemporalTermo",
+    "TrechoTrabalhoFuturo": "TrechoTrabalhoFuturo",
     "arquivo": "arquivo",
     "categoria": "categoria",
     "ordem": "ordem",
     "frequencia": "frequencia",
+    "ano": "ano",
+    "caminhoArquivo": "caminhoArquivo",
     "quantidadeTokens": "quantidadeTokens",
     "quantidadeReferencias": "quantidadeReferencias",
     "quantidadeObjetivos": "quantidadeObjetivos",
@@ -55,6 +61,22 @@
     },
     "temTrigramasFrequentes": {
       "@id": "temTrigramasFrequentes",
+      "@container": "@list"
+    },
+    "temTecnicaMencionada": {
+      "@id": "temTecnicaMencionada",
+      "@container": "@list"
+    },
+    "temEvolucaoTemporal": {
+      "@id": "temEvolucaoTemporal",
+      "@container": "@list"
+    },
+    "temTrabalhoFuturo": {
+      "@id": "temTrabalhoFuturo",
+      "@container": "@list"
+    },
+    "temVisualizacao": {
+      "@id": "temVisualizacao",
       "@container": "@list"
     },
     "temEstatisticas": "temEstatisticas",
@@ -4960,6 +4982,421 @@
       "ordem": 10,
       "termo": "foa qml qhcp",
       "frequencia": 19
+    }
+  ],
+  "temVisualizacao": [
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/visualizacao/1",
+      "@type": "Visualizacao",
+      "ordem": 1,
+      "caminhoArquivo": "resultados/observacoes/palavras_mais_citadas.png"
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/visualizacao/2",
+      "@type": "Visualizacao",
+      "ordem": 2,
+      "caminhoArquivo": "resultados/observacoes/nuvem_palavras_geral.png"
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/visualizacao/3",
+      "@type": "Visualizacao",
+      "ordem": 3,
+      "caminhoArquivo": "resultados/observacoes/tecnicas_mais_mencionadas.png"
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/visualizacao/4",
+      "@type": "Visualizacao",
+      "ordem": 4,
+      "caminhoArquivo": "resultados/observacoes/evolucao_temporal_termos.png"
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/visualizacao/5",
+      "@type": "Visualizacao",
+      "ordem": 5,
+      "caminhoArquivo": "resultados/observacoes/heatmap_artigo_termo.png"
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/visualizacao/6",
+      "@type": "Visualizacao",
+      "ordem": 6,
+      "caminhoArquivo": "resultados/observacoes/termos_trabalhos_futuros.png"
+    }
+  ],
+  "temTecnicaMencionada": [
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/quantum-computing",
+      "@type": "TecnicaMencionada",
+      "ordem": 1,
+      "termo": "quantum computing",
+      "frequencia": 162
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/machine-learning",
+      "@type": "TecnicaMencionada",
+      "ordem": 2,
+      "termo": "machine learning",
+      "frequencia": 110
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/quantum-circuit",
+      "@type": "TecnicaMencionada",
+      "ordem": 3,
+      "termo": "quantum circuit",
+      "frequencia": 109
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/blockchain",
+      "@type": "TecnicaMencionada",
+      "ordem": 4,
+      "termo": "blockchain",
+      "frequencia": 97
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/quantum-algorithm",
+      "@type": "TecnicaMencionada",
+      "ordem": 5,
+      "termo": "quantum algorithm",
+      "frequencia": 65
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/intrusion-detection",
+      "@type": "TecnicaMencionada",
+      "ordem": 6,
+      "termo": "intrusion detection",
+      "frequencia": 56
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/neural-network",
+      "@type": "TecnicaMencionada",
+      "ordem": 7,
+      "termo": "neural network",
+      "frequencia": 55
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/transfer-learning",
+      "@type": "TecnicaMencionada",
+      "ordem": 8,
+      "termo": "transfer learning",
+      "frequencia": 52
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/reinforcement-learning",
+      "@type": "TecnicaMencionada",
+      "ordem": 9,
+      "termo": "reinforcement learning",
+      "frequencia": 45
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/quantum-machine-learning",
+      "@type": "TecnicaMencionada",
+      "ordem": 10,
+      "termo": "quantum machine learning",
+      "frequencia": 34
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/hybrid-quantum-classical",
+      "@type": "TecnicaMencionada",
+      "ordem": 11,
+      "termo": "hybrid quantum classical",
+      "frequencia": 29
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/feature-selection",
+      "@type": "TecnicaMencionada",
+      "ordem": 12,
+      "termo": "feature selection",
+      "frequencia": 20
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/variational-quantum-circuit",
+      "@type": "TecnicaMencionada",
+      "ordem": 13,
+      "termo": "variational quantum circuit",
+      "frequencia": 18
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/quantum-neural-network",
+      "@type": "TecnicaMencionada",
+      "ordem": 14,
+      "termo": "quantum neural network",
+      "frequencia": 16
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/post-quantum-cryptography",
+      "@type": "TecnicaMencionada",
+      "ordem": 15,
+      "termo": "post quantum cryptography",
+      "frequencia": 16
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/quantum-key-distribution",
+      "@type": "TecnicaMencionada",
+      "ordem": 16,
+      "termo": "quantum key distribution",
+      "frequencia": 13
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/quantum-optimization",
+      "@type": "TecnicaMencionada",
+      "ordem": 17,
+      "termo": "quantum optimization",
+      "frequencia": 7
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/quantum-support-vector-machine",
+      "@type": "TecnicaMencionada",
+      "ordem": 18,
+      "termo": "quantum support vector machine",
+      "frequencia": 6
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/variational-quantum-algorithm",
+      "@type": "TecnicaMencionada",
+      "ordem": 19,
+      "termo": "variational quantum algorithm",
+      "frequencia": 5
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/tecnica/quantum-recurrent-neural-network",
+      "@type": "TecnicaMencionada",
+      "ordem": 20,
+      "termo": "quantum recurrent neural network",
+      "frequencia": 4
+    }
+  ],
+  "temEvolucaoTemporal": [
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2025/quantum",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2025",
+      "termo": "quantum",
+      "frequencia": 147
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2025/model",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2025",
+      "termo": "model",
+      "frequencia": 46
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2025/state",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2025",
+      "termo": "state",
+      "frequencia": 131
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2025/circuit",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2025",
+      "termo": "circuit",
+      "frequencia": 118
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2025/gate",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2025",
+      "termo": "gate",
+      "frequencia": 146
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2025/classical",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2025",
+      "termo": "classical",
+      "frequencia": 21
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2025/data",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2025",
+      "termo": "data",
+      "frequencia": 35
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2025/measurement",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2025",
+      "termo": "measurement",
+      "frequencia": 36
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2026/quantum",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2026",
+      "termo": "quantum",
+      "frequencia": 1497
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2026/model",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2026",
+      "termo": "model",
+      "frequencia": 485
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2026/state",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2026",
+      "termo": "state",
+      "frequencia": 372
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2026/circuit",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2026",
+      "termo": "circuit",
+      "frequencia": 277
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2026/gate",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2026",
+      "termo": "gate",
+      "frequencia": 247
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2026/classical",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2026",
+      "termo": "classical",
+      "frequencia": 295
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2026/data",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2026",
+      "termo": "data",
+      "frequencia": 277
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/evolucao/2026/measurement",
+      "@type": "EvolucaoTemporalTermo",
+      "ano": "2026",
+      "termo": "measurement",
+      "frequencia": 254
+    }
+  ],
+  "temTrabalhoFuturo": [
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/1",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 1,
+      "arquivo": "1-s2.0-S266630742500035X-main.pdf",
+      "texto": "Finally, scalability remains a persistent challenge because many quantum models face barriers when applied to complex systems, necessitating further research to evaluate their feasibility in real-world scenarios. 4.7."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/2",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 2,
+      "arquivo": "1-s2.0-S266630742500035X-main.pdf",
+      "texto": "Future research directions Future research in quantum AI should focus on developing more stable quantum hardwareparticularly superconducting, photonic, and hybrid qubits less affected by noisewhile optimizing hybrid quantumclassical models to boost efficiency in machine learning and optimization tasks and advancing encoding and data structuring methods to create datasets tailored for quantum algorithms."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/3",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 3,
+      "arquivo": "1-s2.0-S266630742500035X-main.pdf",
+      "texto": "Future research should prioritize improving qubit coherence, enhancing post-quantum cryptography, and developing scalable quantum architectures, thereby ensuring the feasi bility of these emerging technologies in real-world scenarios."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/4",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 4,
+      "arquivo": "s10115-026-02685-6.pdf",
+      "texto": "Therefore, to overcome this limitation, our future work will check the performance of QRNN on various length datasets."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/5",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 5,
+      "arquivo": "s10791-026-09990-2.pdf",
+      "texto": "In our future work, we will focus on the latest advancements in quantum computing technology and further investigate the performance and applications of semi-quantum blockchain."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/6",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 6,
+      "arquivo": "s40507-026-00463-5.pdf",
+      "texto": "Future research may investigate runtime strategies for dynamically allocating tasks between classical and quantum processors, depending on the complexity and dimensionality of incoming data streams."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/7",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 7,
+      "arquivo": "s40507-026-00483-1.pdf",
+      "texto": "Nonetheless, to our knowledge, this approach has not been clearly discussed in literature, while still may be an interesting future research direction."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/8",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 8,
+      "arquivo": "s40507-026-00483-1.pdf",
+      "texto": "A hybrid approach to leverage the strengths of both model may be instrumental in guiding experimental implementations on superconducting, trapped-ion, and photonic platforms. 7.3 Limitations and future directions Several limitations of the present analysis should be acknowledged."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/9",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 9,
+      "arquivo": "s40507-026-00483-1.pdf",
+      "texto": "Conversely, the overheads of error correction and magic state distillation in CBQC may become prohibitive as systems scale, motivating further research into alternative faulttolerant schemes."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/10",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 10,
+      "arquivo": "s40507-026-00513-y.pdf",
+      "texto": "tegrationwiththepresentpreproc essingstageisanaturaldirectionforfuture work. 4C o n c l u s i o n In this work, we presented a greedy heuristic algorithm for efficiently reordering gates duringpreprocessing, alongwiththepackingandpartitioningapproachesintegratedinto ara Qne, thedistributed quantumcompilerdevelopedby Welinq."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/11",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 11,
+      "arquivo": "s41534-025-01146-2.pdf",
+      "texto": "Furthermore, extending the simulations to investigate the p erformance of logical gates and computation55, even for the surface code, would be an interesting future direction."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/12",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 12,
+      "arquivo": "s41598-026-40634-z.pdf",
+      "texto": "Exploring this integration represents a promising direction for future research."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/13",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 13,
+      "arquivo": "s41598-026-40634-z.pdf",
+      "texto": "Future work will evaluate the proposed framework on real network traffic streams to assess its real-time intrusion-detection capability."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/14",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 14,
+      "arquivo": "s41598-026-40634-z.pdf",
+      "texto": "Additionally, future work will explore integrating Singular Pooling (SP)28 into the quantum transfer learning framework."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/15",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 15,
+      "arquivo": "s41598-026-40634-z.pdf",
+      "texto": "Quantumenhanced machine learning demonstrates strong potential in addressing complex cybersecurity challenges, and the findings of this work provide a foundation for future research."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/16",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 16,
+      "arquivo": "s41598-026-40634-z.pdf",
+      "texto": "Future investigations will focus on optimizing computational efficiency, reducing inference latency, and extending the framework toward real-time deployment scenarios, further strengthening its applicability in operational cybersecurity environments."
+    },
+    {
+      "@id": "http://example.org/trab2-ia/lucas-matheus/quantum-computing-nlp-analysis/trabalho-futuro/17",
+      "@type": "TrechoTrabalhoFuturo",
+      "ordem": 17,
+      "arquivo": "s41598-026-42859-4.pdf",
+      "texto": "In future work, QRGEC will be extended toward quantum multi agent federated coordination to enable decentralized learning across interconnected edge clusters."
     }
   ]
 }

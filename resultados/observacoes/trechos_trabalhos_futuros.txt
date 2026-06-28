@@ -1,0 +1,51 @@
+Arquivo: 1-s2.0-S266630742500035X-main.pdf
+Finally, scalability remains a persistent challenge because many quantum models face barriers when applied to complex systems, necessitating further research to evaluate their feasibility in real-world scenarios. 4.7.
+--------------------------------------------------------------------------------
+Arquivo: 1-s2.0-S266630742500035X-main.pdf
+Future research directions Future research in quantum AI should focus on developing more stable quantum hardwareparticularly superconducting, photonic, and hybrid qubits less affected by noisewhile optimizing hybrid quantumclassical models to boost efficiency in machine learning and optimization tasks and advancing encoding and data structuring methods to create datasets tailored for quantum algorithms.
+--------------------------------------------------------------------------------
+Arquivo: 1-s2.0-S266630742500035X-main.pdf
+Future research should prioritize improving qubit coherence, enhancing post-quantum cryptography, and developing scalable quantum architectures, thereby ensuring the feasi bility of these emerging technologies in real-world scenarios.
+--------------------------------------------------------------------------------
+Arquivo: s10115-026-02685-6.pdf
+Therefore, to overcome this limitation, our future work will check the performance of QRNN on various length datasets.
+--------------------------------------------------------------------------------
+Arquivo: s10791-026-09990-2.pdf
+In our future work, we will focus on the latest advancements in quantum computing technology and further investigate the performance and applications of semi-quantum blockchain.
+--------------------------------------------------------------------------------
+Arquivo: s40507-026-00463-5.pdf
+Future research may investigate runtime strategies for dynamically allocating tasks between classical and quantum processors, depending on the complexity and dimensionality of incoming data streams.
+--------------------------------------------------------------------------------
+Arquivo: s40507-026-00483-1.pdf
+Nonetheless, to our knowledge, this approach has not been clearly discussed in literature, while still may be an interesting future research direction.
+--------------------------------------------------------------------------------
+Arquivo: s40507-026-00483-1.pdf
+A hybrid approach to leverage the strengths of both model may be instrumental in guiding experimental implementations on superconducting, trapped-ion, and photonic platforms. 7.3 Limitations and future directions Several limitations of the present analysis should be acknowledged.
+--------------------------------------------------------------------------------
+Arquivo: s40507-026-00483-1.pdf
+Conversely, the overheads of error correction and magic state distillation in CBQC may become prohibitive as systems scale, motivating further research into alternative faulttolerant schemes.
+--------------------------------------------------------------------------------
+Arquivo: s40507-026-00513-y.pdf
+tegrationwiththepresentpreproc essingstageisanaturaldirectionforfuture work. 4C o n c l u s i o n In this work, we presented a greedy heuristic algorithm for efficiently reordering gates duringpreprocessing, alongwiththepackingandpartitioningapproachesintegratedinto ara Qne, thedistributed quantumcompilerdevelopedby Welinq.
+--------------------------------------------------------------------------------
+Arquivo: s41534-025-01146-2.pdf
+Furthermore, extending the simulations to investigate the p erformance of logical gates and computation55, even for the surface code, would be an interesting future direction.
+--------------------------------------------------------------------------------
+Arquivo: s41598-026-40634-z.pdf
+Exploring this integration represents a promising direction for future research.
+--------------------------------------------------------------------------------
+Arquivo: s41598-026-40634-z.pdf
+Future work will evaluate the proposed framework on real network traffic streams to assess its real-time intrusion-detection capability.
+--------------------------------------------------------------------------------
+Arquivo: s41598-026-40634-z.pdf
+Additionally, future work will explore integrating Singular Pooling (SP)28 into the quantum transfer learning framework.
+--------------------------------------------------------------------------------
+Arquivo: s41598-026-40634-z.pdf
+Quantumenhanced machine learning demonstrates strong potential in addressing complex cybersecurity challenges, and the findings of this work provide a foundation for future research.
+--------------------------------------------------------------------------------
+Arquivo: s41598-026-40634-z.pdf
+Future investigations will focus on optimizing computational efficiency, reducing inference latency, and extending the framework toward real-time deployment scenarios, further strengthening its applicability in operational cybersecurity environments.
+--------------------------------------------------------------------------------
+Arquivo: s41598-026-42859-4.pdf
+In future work, QRGEC will be extended toward quantum multi agent federated coordination to enable decentralized learning across interconnected edge clusters.
+--------------------------------------------------------------------------------

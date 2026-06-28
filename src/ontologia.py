@@ -18,6 +18,7 @@ ONTOLOGIA_DIR = BASE_DIR / "ontologia"
 
 CAMINHO_ETAPA1 = RESULTADOS_DIR / "etapa1_resultados.json"
 CAMINHO_ETAPA2 = RESULTADOS_DIR / "etapa2_resultados.json"
+CAMINHO_OBSERVACOES = RESULTADOS_DIR / "observacoes" / "observacoes_resumo.json"
 CAMINHO_SAIDA = ONTOLOGIA_DIR / "ontologia_corpus.jsonld"
 
 # IRI base criada só para este trabalho. Ajuda a dar identificadores aos recursos.
@@ -57,10 +58,16 @@ def montar_contexto() -> dict:
         "ReferenciaBibliografica": "ReferenciaBibliografica",
         "FrequenciaTermo": "FrequenciaTermo",
         "EstatisticasArtigo": "EstatisticasArtigo",
+        "Visualizacao": "Visualizacao",
+        "TecnicaMencionada": "TecnicaMencionada",
+        "EvolucaoTemporalTermo": "EvolucaoTemporalTermo",
+        "TrechoTrabalhoFuturo": "TrechoTrabalhoFuturo",
         "arquivo": "arquivo",
         "categoria": "categoria",
         "ordem": "ordem",
         "frequencia": "frequencia",
+        "ano": "ano",
+        "caminhoArquivo": "caminhoArquivo",
         "quantidadeTokens": "quantidadeTokens",
         "quantidadeReferencias": "quantidadeReferencias",
         "quantidadeObjetivos": "quantidadeObjetivos",
@@ -102,6 +109,22 @@ def montar_contexto() -> dict:
         },
         "temTrigramasFrequentes": {
             "@id": "temTrigramasFrequentes",
+            "@container": "@list",
+        },
+        "temTecnicaMencionada": {
+            "@id": "temTecnicaMencionada",
+            "@container": "@list",
+        },
+        "temEvolucaoTemporal": {
+            "@id": "temEvolucaoTemporal",
+            "@container": "@list",
+        },
+        "temTrabalhoFuturo": {
+            "@id": "temTrabalhoFuturo",
+            "@container": "@list",
+        },
+        "temVisualizacao": {
+            "@id": "temVisualizacao",
             "@container": "@list",
         },
         "temEstatisticas": "temEstatisticas",
@@ -219,6 +242,88 @@ def montar_artigo(nome: str, info_etapa1: dict, info_etapa2: dict) -> dict:
     return artigo
 
 
+
+def montar_visualizacoes(caminhos: list[str]) -> list[dict]:
+    """Coloca no JSON-LD os arquivos de imagem gerados para a apresentação."""
+    itens = []
+
+    for indice, caminho in enumerate(caminhos, start=1):
+        itens.append({
+            "@id": f"{BASE_IRI}visualizacao/{indice}",
+            "@type": "Visualizacao",
+            "ordem": indice,
+            "caminhoArquivo": caminho,
+        })
+
+    return itens
+
+
+def montar_tecnicas(contagens: dict[str, int]) -> list[dict]:
+    """Registra as técnicas mais citadas no corpus."""
+    itens = []
+
+    for indice, (tecnica, frequencia) in enumerate(contagens.items(), start=1):
+        itens.append({
+            "@id": f"{BASE_IRI}tecnica/{texto_para_id(tecnica)}",
+            "@type": "TecnicaMencionada",
+            "ordem": indice,
+            "termo": tecnica,
+            "frequencia": int(frequencia),
+        })
+
+    return itens
+
+
+def montar_evolucao_temporal(evolucao: dict) -> list[dict]:
+    """Transforma a tabela ano x termo em recursos JSON-LD."""
+    itens = []
+    frequencias = evolucao.get("frequencias_por_ano", {})
+
+    for ano, termos in frequencias.items():
+        for termo, frequencia in termos.items():
+            itens.append({
+                "@id": f"{BASE_IRI}evolucao/{ano}/{texto_para_id(termo)}",
+                "@type": "EvolucaoTemporalTermo",
+                "ano": ano,
+                "termo": termo,
+                "frequencia": int(frequencia),
+            })
+
+    return itens
+
+
+def montar_trabalhos_futuros(dados: dict) -> list[dict]:
+    """Adiciona os trechos em que os artigos falam de trabalhos futuros."""
+    itens = []
+    trechos = dados.get("trabalhos_futuros", {}).get("trechos", [])
+
+    for indice, item in enumerate(trechos, start=1):
+        itens.append({
+            "@id": f"{BASE_IRI}trabalho-futuro/{indice}",
+            "@type": "TrechoTrabalhoFuturo",
+            "ordem": indice,
+            "arquivo": item.get("arquivo", ""),
+            "texto": item.get("trecho", ""),
+        })
+
+    return itens
+
+
+def adicionar_observacoes(ontologia: dict) -> None:
+    """
+    Inclui no JSON-LD as análises extras do enunciado, caso elas já tenham
+    sido geradas pelo script observacoes.py.
+    """
+    if not CAMINHO_OBSERVACOES.exists():
+        return
+
+    dados = carregar_json(CAMINHO_OBSERVACOES)
+    ontologia["temVisualizacao"] = montar_visualizacoes(dados.get("visualizacoes_geradas", []))
+    ontologia["temTecnicaMencionada"] = montar_tecnicas(dados.get("tecnicas_mais_mencionadas", {}))
+    ontologia["temEvolucaoTemporal"] = montar_evolucao_temporal(dados.get("evolucao_temporal", {}))
+    ontologia["temTrabalhoFuturo"] = montar_trabalhos_futuros(dados)
+
+
 def main() -> None:
     print("\nSerialização em Ontologia JSON-LD\n")
 
@@ -254,6 +359,8 @@ def main() -> None:
         "temBigramasFrequentes": montar_frequencias(dados_etapa1.get("top_bigramas", {}), "bigrama"),
         "temTrigramasFrequentes": montar_frequencias(dados_etapa1.get("top_trigramas", {}), "trigrama"),
     }
+
+    adicionar_observacoes(ontologia)
 
     salvar_json(ontologia, CAMINHO_SAIDA)
     print(f"\nOntologia salva em: {CAMINHO_SAIDA}")

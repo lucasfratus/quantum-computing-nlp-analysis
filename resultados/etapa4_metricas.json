@@ -1,0 +1,50 @@
+{
+  "quantidade_artigos_avaliados": 12,
+  "por_categoria": {
+    "objetivo": {
+      "tp": 20,
+      "fp": 13,
+      "fn": 29,
+      "precisao": 0.6061,
+      "cobertura": 0.4082,
+      "taxa_falsos_positivos": 0.3939,
+      "taxa_falsos_negativos": 0.5918
+    },
+    "problema": {
+      "tp": 20,
+      "fp": 28,
+      "fn": 61,
+      "precisao": 0.4167,
+      "cobertura": 0.2469,
+      "taxa_falsos_positivos": 0.5833,
+      "taxa_falsos_negativos": 0.7531
+    },
+    "metodo": {
+      "tp": 6,
+      "fp": 42,
+      "fn": 134,
+      "precisao": 0.125,
+      "cobertura": 0.0429,
+      "taxa_falsos_positivos": 0.875,
+      "taxa_falsos_negativos": 0.9571
+    },
+    "contribuicoes": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 63,
+      "precisao": 1.0,
+      "cobertura": 0.137,
+      "taxa_falsos_positivos": 0.0,
+      "taxa_falsos_negativos": 0.863
+    }
+  },
+  "global": {
+    "tp": 56,
+    "fp": 83,
+    "fn": 287,
+    "precisao": 0.4029,
+    "cobertura": 0.1633,
+    "taxa_falsos_positivos": 0.5971,
+    "taxa_falsos_negativos": 0.8367
+  }
+}
