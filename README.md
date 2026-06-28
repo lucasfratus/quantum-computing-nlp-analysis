@@ -212,14 +212,6 @@ resultados/observacoes/observacoes_resumo.json
 resultados/observacoes/trechos_trabalhos_futuros.txt
 ```
 
-A evolução temporal deve ser interpretada com cuidado, pois o corpus possui mais artigos de 2026 do que de 2025. Portanto, o gráfico mostra a frequência observada no corpus, e não uma tendência geral da área.
-
-## Demonstração com artigos adicionais
-
-Para a apresentação, podem ser utilizados artigos adicionais que não fazem parte dos 12 artigos principais. A ideia é mostrar que o pipeline também funciona com documentos novos.
-
-Uma forma simples de testar é colocar os PDFs adicionais na pasta `artigos/` e executar novamente as etapas principais.
-
 ## Observação sobre os arquivos gerados
 
 Os arquivos das pastas `resultados/` e `ontologia/` podem conter trechos copiados diretamente dos artigos analisados. Esses trechos são saídas do sistema de PLN e servem para mostrar o resultado da extração automática, não sendo texto autoral do membros da dupla.
