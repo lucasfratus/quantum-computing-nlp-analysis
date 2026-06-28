@@ -1,0 +1,6 @@
+pypdf
+pdfminer.six
+nltk
+matplotlib
+wordcloud
+numpy
