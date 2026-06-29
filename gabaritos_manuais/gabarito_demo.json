@@ -1,0 +1,75 @@
+[
+  {
+    "arquivo": "Compiler_Design_for_Distributed_Quantum_Computing.pdf",
+    "objetivo": [
+      "With this perspective, in this article, we first discuss the main challenges arising with compiler design for distributed quantum computing.",
+      "Finally, we validate the analytical results, and we confirm the validity of the compiler design through an extensive performance analysis.",
+      "In the following, we focus on the problem of designing a quantum algorithm compiler for distributed quantum compilation.",
+      "In particular, we present the implementation of a compiler that is able to cope with the worst-case scenario for a distributed quantum computing architecture;we validate the compiling over head upper bound; we illustrate experimental results regarding the compilation of several quantum circuits, with our compiler compared to astate-of-the-artsolution.Finally, Section VI concludes this article.",
+      "Here, we perform a performance analysis for the compiler design conducted in Section IV."
+    ],
+    "problema": [
+      "Current quantum computers are commonly defined as noisy intermediate-scale quantum (NISQ) devices, being characterized by a few dozens of quantum bits (qubits) with nonuniform quality and highly constrained physical connectivity.",
+      "To this aim, distributed quantum computing requires a new generation of quantum compilers, for mapping any quantum algorithm to any distributed quantum computing architecture.",
+      "When it comes to distributed computing architectures, there are two main issues arising with the compiler design.",
+      "Hence, a crucial tradeoff between communication and data qubits arises.",
+      "This optimization task represents an interesting yet unaddressed open problem.",
+      "These additional constraints must be properly modeled within the coupling map, so that the distributed quantum compiler can optimize the quantum circuit by accounting for the temporal dynamics arising with the distributed architecture.",
+      "Hence, a tradeoff between “augmented connectivity” and “EPR cost” arises with entanglement swapping, and a distributed quantum compiler must carefully account for these pros and cons.",
+      "Clearly, the optimal strategies—as well as the metrics to measure the optimality of a strategy—represents interesting open problems."
+    ],
+    "metodo": [
+      "Furthermore, we also evaluate the overhead in terms of how many calls to the link entanglement generation process are required from the compiling algorithm.",
+      "We implemented the strategies discussed in Section IV-B in Python, using Qiskit [27] as the development framework.",
+      "Reading the circuit from left to right, the front layer, i.e., a layer comprising only CNOT gates that can be executed in parallel, is updated.",
+      "Then, the front layer is compiled, rendering all currently involved CNOT gates executable.",
+      "This process is repeated until no more front layers can be computed, meaning that all the circuit gates have been mapped to the distributed architecture.",
+      "When the entanglement-swapping-based strategy is adopted, remote CNOT gates preceded by entanglement swapping are applied whenever the involved QPUs are not neighbors.",      "Then, in Section V-B, we validate the theoretical upper bounds on the number of layers that result from compiling a layer of remote CNOTs, derived in Section IV-B, against an extensive set of medium-size quantum circuits of practical interest."
+    ],
+    "contribuicoes": [
+      "The derived bound accounts for the overhead induced by the underlying computing architecture as well as the additional overhead induced by the suboptimal quantum compiler—expressly designed in this article to achieve three key features, namely, general-purpose, efficient, and effective.",
+      "General-purpose because our compiler does not require any particular assumption on the quantum circuit to be compiled.",
+      "Hence, the depth overhead grows linearly with the number of logical qubits of the quantum circuit to be compiled.",
+      "We validated the theoretical upper bound against an extensive set of medium-size quantum circuits of practical interest, and we confirmed the validity of the compiler design through an extensive performance analysis."
+    ]
+  },
+  {
+    "arquivo": "s13638-025-02567-5.pdf",
+    "objetivo": [
+      "To this end, we propose a quantum secret sharing (QSS) scheme based on the local distinguishability of orthogonal eight-qudit entangled states.",
+      "Based on this framework, we develop a general (k, n)-threshold quantum synchronization sharing protocol and verify its effectiveness using a (7, 8)-threshold example on the IBM Qiskit platform.",
+      "This rule offers a more precise and intuitive characterization for the local distinguishability of multipartite entangled states, addressing the limitations in the expression of judgment space. • General (k, n) threshold QSS protocol: Based on the newly proposed distinction rule, we develop a general (k, n) threshold quantum secret sharing protocol.",
+      "Furthermore, it proposes novel discrimination rules for judgment spaces, characterizing distinguishability through aggregation patterns of participants’ local measurement results.",
+      "Finally, a universal (k, n) threshold QSS protocol is designed, with implementation and verification demonstrated using a (7, 8) example."
+    ],
+    "problema": [
+      "Maintaining confidentiality and reliability in distributed quantum environments remains a significant challenge.",
+      "In recent years, the rapid development of quantum computing has introduced new paradigms for information processing, while also posing significant challenges to classical cryptographic systems.",
+      "However, many existing QSS schemes still face challenges such as reliance on a trusted dealer, complex joint measurements, or limited scalability, which hinder their practical deployment in dynamic and heterogeneous environments.",
+      "However, Yang et al. [9] swiftly identified potential information leakage risks in the scheme proposed in reference [8].",
+      "Nonetheless, their expression of judgment space was considered not entirely perfect.",
+      "In a separate effort, Liu et al. [11] proposed a QSS scheme based on seven-particle orthogonal entangled states, but this scheme exhibited certain security risks and lacked flexibility and broad applicability in practical use.",
+      "Although previous research has made progress in LOCC-QSS, discrimination spaces, and multi-party threshold schemes, several challenges remain: (i) the available sets of orthogonal entangled states are limited and inconvenient to select, which affects the flexibility and scalability of protocols; (ii) the formulation and usage rules of discrimination spaces are not sufficiently intuitive and unified, making it difficult to support systematic distinguishability analysis under LOCC; (iii) there is a lack of a construction framework that balances universal (k, n) threshold design with rigorous proofs of distinguishability thresholds."
+    ],
+    "metodo": [
+      "We systematically construct 22 types of eight-qudit entangled states, define their corresponding judgment spaces, and introduce a new distinction rule to simplify the local discrimination process.",
+      "Based on this framework, we develop a general (k, n)-threshold quantum synchronization sharing protocol and verify its effectiveness using a (7, 8)-threshold example on the IBM Qiskit platform.",
+      "Based on the above analysis, a total of 22 different cases were obtained.",
+      "According to the analysis above, a threshold (k, n) QSS scheme based on LOCC can be proposed.",
+      "Secret recovery requires the cooperation of no fewer than k participants, thus being resilient against unambiguous attacks.",
+      "The following example illustrates the scheme with a (7, 8) threshold.",
+      "To further validate the correctness and feasibility of the proposed eight-qudit QSS scheme, extensive simulations were conducted on the IBM Qiskit platform.",
+      "Experimental setup: All simulations were implemented using IBM Qiskit 1.0.2 with a backend configuration equivalent to an eight-qubit quantum processor.",
+      "The simulation adopted the QASM simulator with 8192 measurement shots to ensure statistical reliability."
+    ],
+    "contribuicoes": [
+      "Compared to the previous seven-particle model, this scheme significantly expands the quantum state space, enhances security, and improves flexibility.",
+      "Results show that this scheme is resilient to multiple attack types and provides a scalable approach for secure quantum information sharing in future distributed quantum systems, with potential applications in fields such as quantum-enhanced edge computing.",
+      "The main contributions of this work are summarized as follows: • Novel eight-qudit entangled states construction: We systematically construct 22 dis tinct classes of orthogonal eight-qudit entangled states, expanding the quantum state space significantly compared to the prior seven-particle model [15].",
+      "More importantly, this work contributes to the convergence of quantum informa tion science and distributed secure computing.",
+      "General (k, n) threshold QSS protocol: Based on the newly proposed distinction rule, we develop a general (k, n) threshold quantum secret sharing protocol.",
+      "Furthermore, a comprehensive security analysis demonstrates the scheme’s robustness against various attacks, including intercept-resend and entangled-measurement attacks.",
+      "By establishing a richer quantum state space and an enhanced local distinguishability rule, our scheme lays the groundwork for future exploration of quantum-assisted architectures."
+    ]
+  }
+]
